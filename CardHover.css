@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    width:100vw;
+    height: 100vh;
+    background-color:#009468;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.card{
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+    background-color: #d4fef1;
+    position: relative;
+}
+.card::after{
+    content: "";
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    background-color: rgb(13, 51, 39);
+    border-radius: 10px;
+    top: 0;
+    right: 0;
+    transition: .8s;
+    transform:scale(0);
+}
+.container:hover .card::after{
+    transform:scale(1)
+}
